@@ -2,10 +2,83 @@
 <html>
   <head>
     <title>Latihan FlexBox</title>
-    <link rel="stylesheet" href="style2.css" />
+    <style>
+      /*Memuat font dari Google Fonts*/
+      @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+      body {
+        background-image: url("love.png"), url("bg.jpeg");
+        background-size: 175px 200px, cover; /* Ukuran pola bunga, lalu ukuran background utama */
+        background-repeat: repeat, no-repeat; /* Pola bunga berulang, background utama tidak berulang */
+        background-position: top left, center center; /* Posisi pola bunga, lalu posisi background utama */
+
+        font-family: sans-serif;
+        position: relative;
+        min-height: 100vh;
+      }
+
+      .container-satu {
+        display: flex;
+        flex-direction: row;
+        width: 685px;
+        height: 685px;
+        margin: 50px auto;
+        border: 2px solid #333;
+        background-color: #fff;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden; /*untuk menjaga konten tetap di dalam kotak */
+      }
+      .sidebar-satu {
+        flex: 0 0 150px;
+        padding: 20px;
+        background-color: #fff;
+      }
+      .kolom-utama {
+        flex: 1; /* Kolom utama mengisi sisa ruang */
+        padding: 20px;
+        background-color: #fff;
+      }
+      .sidebar-dua {
+        flex: 0 0 150px;
+        padding: 20px;
+        background-color: #fff;
+      }
+      h2,
+      h3 {
+        text-align: center;
+      }
+      img {
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+        height: auto;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li a {
+        display: block;
+        padding: 5px;
+        text-decoration: none;
+        color: #333;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <div class="container-satu">
+      <div class="sidebar-satu">
+        <h3>Sidebar Satu</h3>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+          <li><a href="#">Link 5</a></li>
+        </ul>
+      </div>
+
       <div class="kolom-utama">
         <h2>Judul Artikel</h2>
         <p>
@@ -28,17 +101,6 @@
           cum sociis natoque penatibus et magnis dis parturient montes nascetur
           ridiculus mus mauris vitae ultricles
         </p>
-      </div>
-
-      <div class="sidebar-satu">
-        <h3>Sidebar Satu</h3>
-        <ul>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-          <li><a href="#">Link 4</a></li>
-          <li><a href="#">Link 5</a></li>
-        </ul>
       </div>
 
       <div class="sidebar-dua">
